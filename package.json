@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rahman95/testing-with-js#readme",
   "devDependencies": {
     "@types/jest": "^24.0.18",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jest-tobetype": "^1.2.3"
   }
 }
