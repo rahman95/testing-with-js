@@ -73,3 +73,29 @@ test("getSelf returns correct user", () => {
 test("getSelf contains firstName", () => {
   expect(functions.getSelf()).toHaveProperty("firstName", "Rahman");
 });
+
+// Test Regex
+test("getUserName returns correct username", () => {
+  expect(functions.getUserName()).toBe("rahman95");
+});
+
+test("getUserName matches lowercase and 0-9 regex", () => {
+  expect(functions.getUserName()).toMatch(/^[a-z0-9_\-]+$/);
+});
+
+// Comparioson Operators
+test("check if 50 is less than 100", () => {
+  expect(functions.returnValue(50)).toBeLessThan(100);
+});
+
+test("check if 50 is less than or equal to 50", () => {
+  expect(functions.returnValue(50)).toBeLessThanOrEqual(50);
+});
+
+test("check if 50 is greater than 25", () => {
+  expect(functions.returnValue(50)).toBeGreaterThan(25);
+});
+
+test("check if 50 is greater than or equal to 25", () => {
+  expect(functions.returnValue(50)).toBeGreaterThanOrEqual(25);
+});

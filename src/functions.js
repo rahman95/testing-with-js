@@ -8,7 +8,9 @@ const functions = {
   getUsers: () => ["user1", "user2", "user3", "admin"],
   getSelf: () => {
     return { firstName: "Rahman", lastName: "Younus", userName: "rahman95" };
-  }
+  },
+  getUserName: () => "rahman95",
+  returnValue: value => value
 };
 
 module.exports = functions;
