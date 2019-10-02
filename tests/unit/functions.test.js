@@ -99,3 +99,21 @@ test("check if 50 is greater than 25", () => {
 test("check if 50 is greater than or equal to 25", () => {
   expect(functions.returnValue(50)).toBeGreaterThanOrEqual(25);
 });
+
+// Testing asynchronous function - Promise
+test("query rahman95 on github", () => {
+  expect.assertions(2);
+  return functions.getGithubUser().then(data => {
+    expect(data.login).toBe("rahman95");
+    expect(data.id).toBe(15032635);
+  });
+});
+
+// Testing asynchronous function - Async/Await
+test("query rahman95 on github", async () => {
+  expect.assertions(2);
+  const data = await functions.getGithubUser();
+
+  expect(data.login).toBe("rahman95");
+  expect(data.id).toBe(15032635);
+});

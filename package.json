@@ -20,5 +20,8 @@
     "@types/jest": "^24.0.18",
     "jest": "^24.9.0",
     "jest-tobetype": "^1.2.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
   }
 }
