@@ -1,6 +1,7 @@
 # Testing with Jest
 
 [![Build Status](https://travis-ci.org/rahman95/testing-with-js.svg?branch=master)](https://travis-ci.org/rahman95/testing-with-js)
+[![Coverage Status](https://coveralls.io/repos/github/rahman95/testing-with-js/badge.svg?branch=master)](https://coveralls.io/github/rahman95/testing-with-js?branch=master)
 
 ## Motivation
 

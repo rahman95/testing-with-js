@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const axios = require("axios");
 
 const functions = {
   add: (num1, num2) => num1 + num2,
@@ -14,9 +14,10 @@ const functions = {
   getUserName: () => "rahman95",
   returnValue: value => value,
   getGithubUser: () => {
-    return fetch("https://api.github.com/users/rahman95").then(res =>
-      res.json()
-    );
+    return axios
+      .get("https://api.github.com/users/rahman95")
+      .then(res => res.data)
+      .catch(err => err);
   }
 };
 
