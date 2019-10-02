@@ -43,6 +43,10 @@ test("isDefined function to return something", () => {
 });
 
 // Test arrays
+test("getUsers has 3 elements", () => {
+  expect(functions.getUsers()).toHaveLength(4);
+});
+
 test("getUsers contains admin", () => {
   expect(functions.getUsers()).toContain("admin");
 });
@@ -101,7 +105,7 @@ test("check if 50 is greater than or equal to 25", () => {
 });
 
 // Testing asynchronous function - Promise
-test("query rahman95 on github", () => {
+test("query rahman95 on github via Promise", () => {
   expect.assertions(2);
   return functions.getGithubUser().then(data => {
     expect(data.login).toBe("rahman95");
@@ -110,7 +114,7 @@ test("query rahman95 on github", () => {
 });
 
 // Testing asynchronous function - Async/Await
-test("query rahman95 on github", async () => {
+test("query rahman95 on github via Async/Await", async () => {
   expect.assertions(2);
   const data = await functions.getGithubUser();
 
